@@ -1,0 +1,37 @@
+
+<div class="row">
+		<div class="col-md-4  col-md-offset-1">
+			<h1 class="text-left"><%= @randmovie1.title %></h1>
+		</div>
+		<div class="col-md-4 col-md-offset-1">
+			<h1 class="text-right"><%= @randmovie2.title %></h1>
+		</div>
+</div>
+
+<div class="row">
+		<div class="col-md-4 col-md-offset-1">
+			<h2 class="text-left"><%= @randmovie1.year %></h2>
+		</div>
+		<div class="col-md-4 col-md-offset-1">
+			<h2 class="text-right"><%= @randmovie2.year %></h2>
+		</div>
+</div>
+
+<div class="row">
+		<div class="col-md-4 col-md-offset-1">
+			<p class="text-justify"><%= @randmovie1.plot %></p>
+		</div>
+		<div class="col-md-4 col-md-offset-1">
+			<p class="text-justify"><%= @randmovie2.plot %></p>
+		</div>
+</div>
+
+<div class="row">
+		<div class="col-md-4 col-md-offset-1">
+			<%= image_tag("#{@randmovie1.poster}") %>
+		</div>
+		<div class="col-md-4 col-md-offset-1">
+			<%= image_tag("#{@randmovie2.poster}", align: "right") %>
+		</div>
+</div>
+</div>
