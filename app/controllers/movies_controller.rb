@@ -4,14 +4,14 @@ class MoviesController < ApplicationController
 
 		@randnum1 = (1 + rand(2155529)).to_s.rjust(7, '0')
 		@randmovie1 = OMDB.id("tt#{@randnum1}")
-		while @randmovie1.type =="episode" || @randmovie1.poster =="N/A"
+		while @randmovie1.type =="episode" || @randmovie1.poster =="N/A" || @randmovie1.imdb_rating <= "5"
 			@randnum1 = (1 + rand(2155529)).to_s.rjust(7, '0')
 			@randmovie1 = OMDB.id("tt#{@randnum1}")
 		end 
 
 		@randnum2 = (1 + rand(2155529)).to_s.rjust(7, '0')
 		@randmovie2 = OMDB.id("tt#{@randnum2}")
-		while @randmovie2.type =="episode" || @randmovie2.poster =="N/A"
+		while @randmovie2.type =="episode" || @randmovie2.poster =="N/A" ||  @randmovie2.imdb_rating <= "5"
 			@randnum2 = (1 + rand(2155529)).to_s.rjust(7, '0')
 			@randmovie2 = OMDB.id("tt#{@randnum2}")
 		end 
