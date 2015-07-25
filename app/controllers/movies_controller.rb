@@ -7,10 +7,12 @@ class MoviesController < ApplicationController
 	headers = {
 	  :content_type => 'application/json',
 	  :trakt_api_version => '2',
-	  :trakt_api_key => '59dbfc8724887b3c99e1da3e0cebe8f5a26c6cfbbff58174a5ddf7fb76a30b1b'
+	  :trakt_api_key => '6aa4d1f769d6b0554862196d91c768fe748a3bb43408ecee2899896cd8ecec71' #for production
+   #:trakt_api_key => '59dbfc8724887b3c99e1da3e0cebe8f5a26c6cfbbff58174a5ddf7fb76a30b1b' # for staging
 	}
 
-	response = RestClient.get 'http://api.staging.trakt.tv/movies/trending', headers
+response = RestClient.get 'https://api-v2launch.trakt.tv/movies/trending', headers  #for production
+#response = RestClient.get 'http://api.staging.trakt.tv/movies/trending', headers # for staging
 	json_response = JSON.parse response.body
 
 
